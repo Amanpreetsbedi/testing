@@ -1,0 +1,54 @@
+@import url("variables.css");
+
+nav {
+    background-color: var(--container-bg);
+    box-shadow: var(--container-shadow);
+    color: var(--login-form-text);
+    font-family: var(--font);
+    font-size: 125%;
+    border-radius: 10px;
+    padding: 0.2rem;
+    width: 500px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+    color: inherit;
+    position: relative;
+    text-decoration: none;
+}
+
+nav ul li a:before {
+    content: attr(text);
+    display: block;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(97, 224, 152);
+    transform: rotateX(90deg);
+    transform-origin: top;
+    transition: 0.5s;
+    color: white;
+}
+
+nav ul li a:hover:before {
+    transform: rotateX(0deg);
+    border-radius: 10px;
+}
